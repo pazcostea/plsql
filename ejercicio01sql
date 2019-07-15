@@ -1,0 +1,12 @@
+DECLARE
+    num1 NUMBER(5) := &num1;
+    num2 NUMBER(5) := 0;
+    result NUMBER (5) := 0;
+    i NUMBER(2) := 0;
+    
+BEGIN    
+    WHILE (i < 10) LOOP
+        DBMS_OUTPUT.PUT_LINE(i || ' x ' || num1 || ' = ' || num1 * i);
+        i := i + 1;
+    END LOOP;
+END;
