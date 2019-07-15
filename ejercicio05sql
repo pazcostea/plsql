@@ -5,8 +5,8 @@ DECLARE
     dia NUMBER(10):= TO_CHAR(fecha, 'D', 'NLS_DATE_LANGUAGE=SPANISH');    
 BEGIN     
     IF dia > 5 THEN
-        DBMS_OUTPUT.PUT_LINE('Es fin de semana');
+        DBMS_OUTPUT.PUT_LINE('La fecha ' || fecha || ' es fin de semana');
     ELSE
-        DBMS_OUTPUT.PUT_LINE('No es fin de semana');
+        DBMS_OUTPUT.PUT_LINE('La fecha ' || fecha || ' no es fin de semana');
     END IF;
 END;
