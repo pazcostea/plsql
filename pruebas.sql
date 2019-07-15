@@ -38,4 +38,29 @@ BEGIN
         DBMS_OUTPUT.PUT_LINE(i);
         i := i + 1;
     END LOOP;
+    
+    -- Condicion FOR
+    FOR contador IN 1..10 LOOP
+        DBMS_OUTPUT.PUT_LINE('HOLA ' || contador);
+    END LOOP;
+    --LOOP solo es un bucle infinito. Se sale con EXIT WHEN
+    i := 0;
+    LOOP
+        DBMS_OUTPUT.PUT_LINE('i: ' || i);
+        IF i = 3 THEN
+            GOTO sentencia1;
+        END IF;
+        EXIT WHEN i >= 10;
+        i := i + 1;
+        
+    END LOOP;
+    
+    --GOTO ejecutar una sentencia concreta
+    --i := 3;
+    --IF i = 3 THEN
+    --    GOTO sentencia1;
+    --END IF;
+    --
+    <<sentencia1>>
+        DBMS_OUTPUT.PUT_LINE('FIN');
 END;
