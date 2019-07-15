@@ -1,7 +1,7 @@
 DECLARE    
     num1 NUMBER(5) := &num1;
     esprimo BOOLEAN := TRUE;
-    i NUMBER(2) := 2;
+    i NUMBER(3) := 2;
 BEGIN    
     IF num1 > 1 THEN
         WHILE esprimo = TRUE AND i < num1 LOOP 
