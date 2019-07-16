@@ -7,9 +7,7 @@ DECLARE
     todas_fecha campo_fecha%ROWTYPE;
     --Declaramos las variables para obtener la media
     total_filas NUMBER(3);
-    total NUMBER (10) := 0;
-    CURSOR gasto IS SELECT ORDER_TOTAL FROM DEMO_ORDERS;
-    gasto_pedido gasto%ROWTYPE;    
+    total NUMBER (10) := 0;       
 BEGIN    
     DBMS_OUTPUT.PUT_LINE('En el campo fecha he metido: ' || fecha);
     FOR fech IN campo_fecha LOOP
