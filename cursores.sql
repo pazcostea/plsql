@@ -4,7 +4,7 @@ DECLARE
     CURSOR mi_cursor IS SELECT * FROM DEMO_CUSTOMERS;
     fila_cliente DEMO_CUSTOMERS%ROWTYPE;
     --Creamos un cursor de un tipo
-    CURSOR mi_cursor2 IS SELECT  CUST_FIRST_NAME FROM DEMO_CUSTOMERS;
+    CURSOR mi_cursor2 IS SELECT CUST_FIRST_NAME FROM DEMO_CUSTOMERS;
     --Creamos una variable que es de tipo del cursor
     fila_custom mi_cursor2%ROWTYPE;
 BEGIN
