@@ -23,6 +23,6 @@ BEGIN
     
     --Probamos a sacar la informacion de una fila
     SELECT * INTO cliente FROM DEMO_CUSTOMERS WHERE CUSTOMER_ID = &id;    
-    DBMS_OUTPUT.PUT_LINE('Nombre cliente en DEMO_CUSTOMERS: ' || cliente.CUST_FIRST_NAME);
+    DBMS_OUTPUT.PUT_LINE('Nombre cliente en DEMO_CUSTOMERS: ' || cliente.CUST_LAST_NAME);
     
 END;
