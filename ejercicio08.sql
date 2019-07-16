@@ -29,9 +29,9 @@ BEGIN
         DBMS_OUTPUT.PUT_LINE('Cantidad: ' || cantidad_total);
         DBMS_OUTPUT.PUT_LINE('Total pedido del ticket: ' || pedid.ORDER_TOTAL);
         media := pedid.ORDER_TOTAL/cantidad_total;
-        DBMS_OUTPUT.PUT_LINE('Media ticket: ' || media);        
+        DBMS_OUTPUT.PUT_LINE('Media ticket: ' || media);
+        DBMS_OUTPUT.PUT_LINE('');  
     END LOOP;    
-    CLOSE pedidos;
-    
+    CLOSE pedidos;  
     
 END;
