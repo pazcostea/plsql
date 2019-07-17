@@ -1,5 +1,5 @@
 --Factorial de un numero
-CREATE OR REPLACE FUNCTION factorial1 (num1 NUMBER)
+CREATE OR REPLACE FUNCTION factorial (num1 NUMBER)
 RETURN NUMBER AS    
 BEGIN    
     IF (num1 = 1) THEN
