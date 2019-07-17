@@ -4,5 +4,5 @@ BEGIN
 END;
 /
 BEGIN
-    hola_mundo();
+    hola_mundo;
 END;
