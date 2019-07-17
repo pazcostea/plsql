@@ -1,13 +1,18 @@
 --Subprograma que devuelva el id del mejor cliente
-CREATE OR REPLACE FUNCTION mejor_cliente2 
-RETURN NUMBER IS
-    id_cliente NUMBER;
-    
+CREATE OR REPLACE FUNCTION mejorcliente 
+RETURN NUMBER AS  
+   miId DEMO_CUSTOMERS.CUSTOMER_ID%TYPE;
 BEGIN    
-    
-    RETURN id_cliente;
+   SELECT ID INTO miId FROM 
+   (SELECT DEMO_ORDERS.CUSTOMER_ID AS ID,
+   SUM(DEMO_ORDERS.ORDER_TOTAL) AS TOTAL
+   FROM DEMO_ORDERS
+   GROUP BY DEMO_ORDERS.CUSTOMER_ID
+   ORDER BY TOTAL DESC)
+   WHERE ROWNUM = 1;
+   return MIiD;
 END;
 /
-BEGIN
-    clg('El mejor cliente es: ' || mejor_cliente2);
-END;
+begin
+   clg('El id es: ' || mejorcliente);
+end;
