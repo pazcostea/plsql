@@ -14,8 +14,7 @@ BEGIN
     ORDER BY DEMO_ORDER_ITEMS.PRODUCT_ID;
     DBMS_OUTPUT.PUT_LINE(gasto_prod);
     --TO_DATE(fecha2, 'dd/mm/yy')
-    --TO_DATE(fecha1, 'dd/mm/yy')  
-    
+    --TO_DATE(fecha1, 'dd/mm/yy')  */    
 END;
 /
 BEGIN
