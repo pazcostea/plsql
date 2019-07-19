@@ -1,0 +1,18 @@
+--Cliente con pedido máximo
+CREATE OR REPLACE PROCEDURE pedido_maximo IS
+   cliente_pedido_maximo DEMO_CUSTOMERS.CUST_FIRST_NAME%TYPE;
+BEGIN
+    SELECT CUST_FIRST_NAME INTO cliente_pedido_maximo FROM 
+    (SELECT ORDER_ID, DEMO_ORDERS.CUSTOMER_ID, DEMO_CUSTOMERS.CUST_FIRST_NAME, ORDER_TOTAL AS TOTAL 
+    FROM DEMO_ORDERS
+    INNER JOIN DEMO_CUSTOMERS
+    ON DEMO_ORDERS.CUSTOMER_ID = DEMO_CUSTOMERS.CUSTOMER_ID
+    ORDER BY TOTAL DESC)
+    WHERE ROWNUM = 1;
+
+    DBMS_OUTPUT.PUT_LINE('El cliente con el pedido máximo es: ' || cliente_pedido_maximo);
+END;
+/
+BEGIN
+    pedido_maximo;
+END;
